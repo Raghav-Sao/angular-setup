@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+	<title>Angular demo</title>
+	<link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="/node_modules/angular/angular.js">	</script>
+	<script src="/app/app.js"></script>
+	<script src="/app/services/calculate-age.service.js"></script>
+	<script src="/app/controllers/demo.ctrl.js"></script>
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div ng-controller="demoCtrl" class="container-fluid">
+	<table class="table table-striped">
+		<caption>Calculate Weight From Age</caption>
+		<thead>
+			<tr class="text-center">
+				<th class="text-center">Name</th>
+				<th class="text-center">Height</th>
+				<th class="text-center">Weight</th>
+			</tr>
+		</thead>
+		<tbody class="text-center">
+			<tr ng-repeat="data in dataSet">
+				<td class="c-red">{{data.name}}</td>
+				<td class="c-red">{{data.height}}</td>
+				<td>
+					<button ng-hide="data.weight" ng-click="getWeight(data.height, data)">Get Weight
+					</button>
+					<span ng-show="data.weight">{{data.weight}}</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<table class="table table-striped">
+		<caption>Calculate Rupees From $</caption>
+		<thead>
+			<tr class="text-center">
+				<th class="text-center">Name</th>
+				<th class="text-center">$ Salary</th>
+				<th class="text-center">Rs Salaray</th>
+			</tr>
+		</thead>
+		<tbody class="text-center">
+			<tr ng-repeat="salary in salaryDataSet">
+				<td class="c-red">{{salary.name}}</td>
+				<td class="c-red">
+					<input type="text" ng-model="salary.salary">
+				</td>
+				<td>
+					<span >{{salary.salary * 70}}</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

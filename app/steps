@@ -1,0 +1,20 @@
+1. 	do install npm first
+2. 	npm init ( select default option)
+3. 	npm install angular (or other dependancy)
+4. 	create index.html
+5. 	include angular path in html page
+6. 	create app folder
+7. 	create app.js in app folder
+8. 	define module in app.js
+9. 	include app.js in index.html 
+10. create controllers folder and create demo.ctrl.js and include in index.html (be sure should be include 	    after app.js)
+11. create $scope variable and show in html page
+
+
+
+create Services-service:
+	1. create folder services, add service file,create service method and include in html page and
+	2. Include service name in controller
+	3. use controller by service name
+
+
